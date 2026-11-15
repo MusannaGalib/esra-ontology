@@ -1,0 +1,6653 @@
+{
+ "@context": {
+  "chameo": "https://w3id.org/emmo/domain/characterisation-methodology/chameo#",
+  "cito": "http://purl.org/spar/cito/",
+  "csvw": "http://www.w3.org/ns/csvw#",
+  "dcterms": "http://purl.org/dc/terms/",
+  "echem": "https://w3id.org/emmo/domain/electrochemistry#",
+  "emmo": "https://w3id.org/emmo#",
+  "esra": "https://data.energystoragera.org/ns#",
+  "owl": "http://www.w3.org/2002/07/owl#",
+  "prov": "http://www.w3.org/ns/prov#",
+  "qudt": "http://qudt.org/schema/qudt/",
+  "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+  "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+  "schema": "https://schema.org/",
+  "skos": "http://www.w3.org/2004/02/skos/core#",
+  "spdx": "http://spdx.org/rdf/terms#",
+  "unit": "http://qudt.org/vocab/unit/",
+  "vann": "http://purl.org/vocab/vann/",
+  "xsd": "http://www.w3.org/2001/XMLSchema#"
+ },
+ "@graph": [
+  {
+   "@id": "esra:Action",
+   "@type": "owl:Class",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "Action"
+   },
+   "skos:altLabel": {
+    "@language": "en",
+    "@value": "ActionRecord"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "One recorded change a person or an agent made to the graph, undoable."
+   },
+   "skos:editorialNote": {
+    "@language": "en",
+    "@value": "schema:Action names the act, not the appended record of it; decided in the actions phase."
+   }
+  },
+  {
+   "@id": "esra:Alert",
+   "@type": "owl:Class",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "Alert"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A rule's finding about the graph, open until an action closes it."
+   },
+   "skos:editorialNote": {
+    "@language": "en",
+    "@value": "No alert or finding class exists in the bundled ontology or schema.org."
+   }
+  },
+  {
+   "@id": "esra:Batch",
+   "@type": "owl:Class",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "Batch"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "One synthesis or purchase lot that samples were made from."
+   },
+   "skos:editorialNote": {
+    "@language": "en",
+    "@value": "No batch or lot class exists in the bundled battery-inferred.ttl or in schema.org; published without an equivalent."
+   }
+  },
+  {
+   "@id": "esra:Cell",
+   "@type": "owl:Class",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "Cell"
+   },
+   "rdfs:subClassOf": {
+    "@id": "echem:electrochemistry_6f2c88c9_5c04_4953_a298_032cc3ab9b77"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "One measured unit as the scanner groups it (a trial); the stage segment is absent when a researcher has one stage."
+   }
+  },
+  {
+   "@id": "esra:Column",
+   "@type": "owl:Class",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "Column"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "One column of a Table, with the header as written, the unit the header states, how many cells hold a value, and its first values."
+   }
+  },
+  {
+   "@id": "esra:Conditions",
+   "@type": "owl:Class",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "Conditions"
+   },
+   "skos:altLabel": {
+    "@language": "en",
+    "@value": "ConditionsSheet"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The study-level values of one technique (an author form sheet, else what every file states)."
+   },
+   "skos:editorialNote": {
+    "@language": "en",
+    "@value": "A study-level conditions table is an ESRA notion; no class in the bundled ontology or schema.org states it."
+   }
+  },
+  {
+   "@id": "esra:Count",
+   "@type": "owl:Class",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "Count"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A number the build computed, with the id of the query that reproduces it."
+   }
+  },
+  {
+   "@id": "esra:CrossStudyLink",
+   "@type": "owl:Class",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "Cross study link"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A link from a study's own node to the canonical node that several studies share, with the basis of the join."
+   },
+   "skos:notation": "CrossStudyLink"
+  },
+  {
+   "@id": "esra:DataCard",
+   "@type": "owl:Class",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "Data card"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The index of a study graph. Read first."
+   },
+   "skos:notation": "DataCard"
+  },
+  {
+   "@id": "esra:DerivedValue",
+   "@type": "owl:Class",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "Derived value"
+   },
+   "rdfs:subClassOf": {
+    "@id": "schema:PropertyValue"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A value computed from the study's files, with its workflow and provenance."
+   },
+   "skos:editorialNote": {
+    "@language": "en",
+    "@value": "A value ESRA's tools computed; a kind of PropertyValue, not equivalent to one."
+   },
+   "skos:notation": "DerivedValue"
+  },
+  {
+   "@id": "esra:File",
+   "@type": "owl:Class",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "File"
+   },
+   "rdfs:subClassOf": [
+    {
+     "@id": "emmo:EMMO_998dd3a0_c85f_4c8d_9fb8_816a93cc3bb8"
+    },
+    {
+     "@id": "schema:MediaObject"
+    }
+   ],
+   "skos:definition": {
+    "@language": "en",
+    "@value": "One data or metadata file of the study."
+   }
+  },
+  {
+   "@id": "esra:FlagValues",
+   "@type": "skos:ConceptScheme",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/annotations.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "Flag values"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The warnings a reader can attach to a value it read from a file. Each value of esra:flag is one of these."
+   }
+  },
+  {
+   "@id": "esra:Instrument",
+   "@type": "owl:Class",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "Instrument"
+   },
+   "rdfs:subClassOf": {
+    "@id": "chameo:CharacterisationMeasurementInstrument"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "One distinct (vendor, model, serial) a reader reported."
+   }
+  },
+  {
+   "@id": "esra:InterlaboratoryStudy",
+   "@type": "owl:Class",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "Interlaboratory study"
+   },
+   "rdfs:subClassOf": {
+    "@id": "esra:Study"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A study in which several groups measure the same materials (the scanner's study node type)."
+   },
+   "skos:notation": "InterlaboratoryStudy"
+  },
+  {
+   "@id": "esra:LinkStatusValues",
+   "@type": "skos:ConceptScheme",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/annotations.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "Link status values"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "Whether a row of an author's spreadsheet was linked to a data file."
+   }
+  },
+  {
+   "@id": "esra:Locator",
+   "@type": "owl:Class",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "Locator"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The place a value was read from. File, sheet, row, column or key."
+   }
+  },
+  {
+   "@id": "esra:LocatorLevelValues",
+   "@type": "skos:ConceptScheme",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/annotations.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "Locator level values"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "How precisely the place a value was read from is known. Each value of esra:locatorLevel is one of these."
+   }
+  },
+  {
+   "@id": "esra:Material",
+   "@type": "owl:Class",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "Material"
+   },
+   "rdfs:subClassOf": {
+    "@id": "emmo:EMMO_4207e895_8b83_4318_996a_72cfb32acd94"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A material as the study names it; a variant points at its canonical material with variantOf or sameAs. A declared material's crate node is also a schema.org ChemicalSubstance (a pending schema.org type, so not stated as an equivalent class)."
+   }
+  },
+  {
+   "@id": "esra:Metric",
+   "@type": "owl:Class",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "Metric"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A named computation (a derivation) with its inputs and outputs. Never a result."
+   }
+  },
+  {
+   "@id": "esra:NotInKeptValues",
+   "@type": "owl:Class",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "Not in kept values"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A field of a technique's schema that the kept values do not fully record."
+   },
+   "skos:notation": "NotInKeptValues"
+  },
+  {
+   "@id": "esra:OriginValues",
+   "@type": "skos:ConceptScheme",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/annotations.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "Origin values"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "Where a recorded value came from. Each value of esra:origin is one of these."
+   }
+  },
+  {
+   "@id": "esra:Paper",
+   "@type": "owl:Class",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "Paper"
+   },
+   "rdfs:subClassOf": {
+    "@id": "schema:ScholarlyArticle"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A publication the study cites."
+   }
+  },
+  {
+   "@id": "esra:Person",
+   "@type": "owl:Class",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "Person"
+   },
+   "rdfs:subClassOf": {
+    "@id": "schema:Person"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A researcher who made or measured cells."
+   }
+  },
+  {
+   "@id": "esra:Question",
+   "@type": "owl:Class",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "Question"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "Something the scan could not decide and asks a person, with numbered options and a default."
+   },
+   "skos:editorialNote": {
+    "@language": "en",
+    "@value": "The scanner's open question has no counterpart class in the bundled ontology or schema.org."
+   }
+  },
+  {
+   "@id": "esra:Record",
+   "@type": "owl:Class",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "Record"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A fact of the scan that is not a field value, carried with its kind, accounting category, origin and the scan entry it came from."
+   }
+  },
+  {
+   "@id": "esra:Sample",
+   "@type": "owl:Class",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "Sample"
+   },
+   "rdfs:subClassOf": {
+    "@id": "chameo:Sample"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A specimen with its own identity - a synthesis product with an ESRA sample ID, or a pellet shared by cells across stages; linked only on a confirmed answer, never guessed."
+   }
+  },
+  {
+   "@id": "esra:SharedIdentifier",
+   "@type": "owl:Class",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "Shared identifier"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "An identifier text that also occurs in another study, listed as a candidate only, not confirmed to name the same object."
+   },
+   "skos:notation": "SharedIdentifier"
+  },
+  {
+   "@id": "esra:StatusValues",
+   "@type": "skos:ConceptScheme",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/annotations.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "Status values"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "Why a field has no value, or only part of one, in the kept values. Each value of esra:status is one of these."
+   }
+  },
+  {
+   "@id": "esra:Study",
+   "@type": "owl:Class",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "Study"
+   },
+   "rdfs:subClassOf": {
+    "@id": "schema:Dataset"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "One deposited study folder and everything the scan found in it."
+   }
+  },
+  {
+   "@id": "esra:Table",
+   "@type": "owl:Class",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "Table"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "One tab of a spreadsheet the authors deposited, or one data table of an instrument file. Its CSV copy has the sheet's own row and column numbers; a table of an instrument file is a reference without rows."
+   }
+  },
+  {
+   "@id": "esra:TableRow",
+   "@type": "owl:Class",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "Table row"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "One row of an author spreadsheet, as the scan kept it."
+   },
+   "skos:notation": "TableRow"
+  },
+  {
+   "@id": "esra:UnitBasisValues",
+   "@type": "skos:ConceptScheme",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/annotations.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "Unit basis values"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "How the unit of a value read from a file was known. Each value of esra:unitBasis is one of these."
+   }
+  },
+  {
+   "@id": "esra:Value",
+   "@type": "owl:Class",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "Value"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "One value of the v1.1 scan with its origin and the place it was read from."
+   }
+  },
+  {
+   "@id": "esra:ValueBlock",
+   "@type": "owl:Class",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "Value block"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "One group of a cell's property values of the same kind: given, read from the instrument, stated as derived, or computable."
+   },
+   "skos:notation": "ValueBlock"
+  },
+  {
+   "@id": "esra:about",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "about"
+   },
+   "rdfs:seeAlso": {
+    "@id": "schema:about"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Value"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The node the value describes: the study, the cell, the file or the form."
+   }
+  },
+  {
+   "@id": "esra:action",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "action"
+   },
+   "schema:domainIncludes": {
+    "@id": "prov:Activity"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The choice a person's saved answer to a scan question made, such as keep, split or continuation."
+   }
+  },
+  {
+   "@id": "esra:actions",
+   "@type": "owl:ObjectProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "owl:inverseOf": {
+    "@id": "esra:actsOn"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "actions"
+   },
+   "schema:domainIncludes": [
+    {
+     "@id": "esra:Alert"
+    },
+    {
+     "@id": "esra:Batch"
+    },
+    {
+     "@id": "esra:Cell"
+    },
+    {
+     "@id": "esra:DerivedValue"
+    },
+    {
+     "@id": "esra:File"
+    },
+    {
+     "@id": "esra:Material"
+    },
+    {
+     "@id": "esra:Question"
+    },
+    {
+     "@id": "esra:Sample"
+    }
+   ],
+   "schema:rangeIncludes": {
+    "@id": "esra:Action"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "From Alert or Batch or Cell or Derived value or File or Material or Question or Sample to Action: the inverse of \"acts on\"."
+   }
+  },
+  {
+   "@id": "esra:actsOn",
+   "@type": "owl:ObjectProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "acts on"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Action"
+   },
+   "schema:rangeIncludes": [
+    {
+     "@id": "esra:Alert"
+    },
+    {
+     "@id": "esra:Batch"
+    },
+    {
+     "@id": "esra:Cell"
+    },
+    {
+     "@id": "esra:DerivedValue"
+    },
+    {
+     "@id": "esra:File"
+    },
+    {
+     "@id": "esra:Material"
+    },
+    {
+     "@id": "esra:Question"
+    },
+    {
+     "@id": "esra:Sample"
+    }
+   ],
+   "skos:definition": {
+    "@language": "en",
+    "@value": "From an action to the node it changes."
+   },
+   "skos:notation": "actsOn"
+  },
+  {
+   "@id": "esra:alerts",
+   "@type": "owl:ObjectProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "owl:inverseOf": {
+    "@id": "esra:raisedOn"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "alerts"
+   },
+   "schema:domainIncludes": [
+    {
+     "@id": "esra:Cell"
+    },
+    {
+     "@id": "esra:DerivedValue"
+    },
+    {
+     "@id": "esra:File"
+    },
+    {
+     "@id": "esra:Material"
+    },
+    {
+     "@id": "esra:Question"
+    },
+    {
+     "@id": "esra:Sample"
+    },
+    {
+     "@id": "esra:Study"
+    }
+   ],
+   "schema:rangeIncludes": {
+    "@id": "esra:Alert"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "From Cell or Derived value or File or Material or Question or Sample or Study to Alert: the inverse of \"raised on\"."
+   }
+  },
+  {
+   "@id": "esra:alias",
+   "@type": "owl:DatatypeProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "alias"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Material"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "Another name the declaration gives the material (a trailing bracket's acronym or name)."
+   }
+  },
+  {
+   "@id": "esra:alsoAt",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "also at"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "JSON Pointers of proven copies of the value in the v1.1 scan."
+   },
+   "skos:notation": "alsoAt"
+  },
+  {
+   "@id": "esra:altLocator",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "alt locator"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Value"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "Another locator where the same value is also stated."
+   },
+   "skos:notation": "altLocator"
+  },
+  {
+   "@id": "esra:area_cm2",
+   "@type": "owl:DatatypeProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "qudt:hasUnit": {
+    "@id": "unit:CentiM2"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "area (cm2)"
+   },
+   "schema:domainIncludes": [
+    {
+     "@id": "esra:Cell"
+    },
+    {
+     "@id": "esra:Sample"
+    }
+   ],
+   "schema:propertyID": {
+    "@id": "echem:electrochemistry_fa7790d6_07bb_4b0f_9965_55966828f5f3"
+   },
+   "schema:unitText": "cm2",
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The area of a cell's electrode or of a sample, in square centimetres."
+   },
+   "skos:notation": "area_cm2"
+  },
+  {
+   "@id": "esra:asksAbout",
+   "@type": "owl:ObjectProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "asks about"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Question"
+   },
+   "schema:rangeIncludes": [
+    {
+     "@id": "esra:Cell"
+    },
+    {
+     "@id": "esra:File"
+    },
+    {
+     "@id": "esra:Material"
+    },
+    {
+     "@id": "esra:Sample"
+    }
+   ],
+   "skos:definition": {
+    "@language": "en",
+    "@value": "From a question to the cell, file, material or sample it asks about."
+   },
+   "skos:notation": "asksAbout"
+  },
+  {
+   "@id": "esra:at",
+   "@type": "owl:DatatypeProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "at"
+   },
+   "rdfs:subPropertyOf": {
+    "@id": "dcterms:date"
+   },
+   "schema:domainIncludes": [
+    {
+     "@id": "esra:Action"
+    },
+    {
+     "@id": "esra:Alert"
+    }
+   ],
+   "skos:definition": {
+    "@language": "en",
+    "@value": "When an action was recorded or an alert was raised (an ISO 8601 date and time)."
+   }
+  },
+  {
+   "@id": "esra:attributedTo",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "attributed to"
+   },
+   "rdfs:seeAlso": {
+    "@id": "prov:wasAttributedTo"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Value"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A short label of the agent that stated the value: a reader, a scanner hook, the upload form or a person."
+   },
+   "skos:notation": "attributedTo"
+  },
+  {
+   "@id": "esra:attrs",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "attrs"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Record"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The record's own parts as a JSON literal, keyed by their path in the scan entry."
+   }
+  },
+  {
+   "@id": "esra:authored",
+   "@type": "owl:ObjectProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "authored"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Person"
+   },
+   "schema:inverseOf": {
+    "@id": "schema:author"
+   },
+   "schema:rangeIncludes": {
+    "@id": "esra:Cell"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "From Person to Cell: the inverse of \"author\"."
+   }
+  },
+  {
+   "@id": "esra:basis",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "basis"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "How a cell component's material or role was decided, such as a role default, a form role or a person's answer."
+   }
+  },
+  {
+   "@id": "esra:blocks",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "blocks"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:DataCard"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The data card's text as a JSON list of titled blocks and paragraphs."
+   }
+  },
+  {
+   "@id": "esra:canonical",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "canonical"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:CrossStudyLink"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The canonical node, shared across studies, that the link joins the study's own node to."
+   }
+  },
+  {
+   "@id": "esra:category",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "category"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Record"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The accounting category the record falls under, such as scan, provenance, entity, link or absence."
+   }
+  },
+  {
+   "@id": "esra:cell_id",
+   "@type": "owl:DatatypeProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "cell ID"
+   },
+   "rdfs:subPropertyOf": {
+    "@id": "schema:identifier"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Cell"
+   },
+   "schema:propertyID": {
+    "@id": "emmo:EMMO_c404e6d9_261d_4d2e_ab0d_ba4e05062647"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The name a researcher gave a cell, as written in the study's files or upload form."
+   },
+   "skos:notation": "cell_id"
+  },
+  {
+   "@id": "esra:cellsMadeFrom",
+   "@type": "owl:ObjectProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "owl:inverseOf": {
+    "@id": "esra:madeFrom"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "cells made from"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Sample"
+   },
+   "schema:rangeIncludes": {
+    "@id": "esra:Cell"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "From Sample to Cell: the inverse of \"made from\"."
+   },
+   "skos:notation": "cellsMadeFrom"
+  },
+  {
+   "@id": "esra:citedBy",
+   "@type": "owl:ObjectProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "cited by"
+   },
+   "rdfs:subPropertyOf": {
+    "@id": "cito:isCitedBy"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Paper"
+   },
+   "schema:inverseOf": {
+    "@id": "schema:citation"
+   },
+   "schema:rangeIncludes": {
+    "@id": "esra:Study"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "From Paper to Study: the inverse of \"citation\"."
+   },
+   "skos:notation": "citedBy"
+  },
+  {
+   "@id": "esra:class",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "class"
+   },
+   "schema:domainIncludes": {
+    "@id": "schema:DefinedTerm"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The esra: class an object of the ontology is typed as."
+   }
+  },
+  {
+   "@id": "esra:column",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "column"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The sheet column letter a value's source cell sits in."
+   }
+  },
+  {
+   "@id": "esra:columnIndex",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "column index"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Column"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The zero-based position of the column in its table."
+   },
+   "skos:notation": "columnIndex"
+  },
+  {
+   "@id": "esra:columnLetter",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "column letter"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Column"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The spreadsheet letter of the column in its sheet."
+   },
+   "skos:notation": "columnLetter"
+  },
+  {
+   "@id": "esra:component",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "component"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Cell"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "One part of a cell with its role, material, how it was decided and its source."
+   }
+  },
+  {
+   "@id": "esra:componentsKey",
+   "@type": "owl:DatatypeProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "components key"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Material"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A mixture's components with their concentrations, order ignored."
+   },
+   "skos:notation": "componentsKey"
+  },
+  {
+   "@id": "esra:compositionKey",
+   "@type": "owl:DatatypeProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "composition key"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Material"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The formula's element counts, symbols sorted; one key for one composition however it is written."
+   },
+   "skos:notation": "compositionKey"
+  },
+  {
+   "@id": "esra:computable",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "computable"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Cell"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The cell's block of quantities that ESRA tools can compute, empty until a tool is run."
+   }
+  },
+  {
+   "@id": "esra:computedInto",
+   "@type": "owl:ObjectProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "owl:inverseOf": {
+    "@id": "esra:inputFile"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "computed into"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:File"
+   },
+   "schema:rangeIncludes": {
+    "@id": "esra:DerivedValue"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "From File to Derived value: the inverse of \"input file\"."
+   },
+   "skos:notation": "computedInto"
+  },
+  {
+   "@id": "esra:conflict",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "conflict"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:PropertyValue"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The differing values that two or more sources state for one field of a cell, each with its source."
+   }
+  },
+  {
+   "@id": "esra:conflictsWith",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "conflicts with"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "Two studies hold different values for one joined object. No winner is chosen."
+   },
+   "skos:notation": "conflictsWith"
+  },
+  {
+   "@id": "esra:csv",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "csv"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Table"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The release path of the CSV copy of the table."
+   }
+  },
+  {
+   "@id": "esra:csvSha256",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "csv sha256"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Table"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The SHA-256 checksum of the table's CSV copy."
+   },
+   "skos:notation": "csvSha256"
+  },
+  {
+   "@id": "esra:declaredBy",
+   "@type": "owl:DatatypeProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "declared by"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Material"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "Who declared the material (platform, ai_extracted, person_answer, metadata_file)."
+   },
+   "skos:notation": "declaredBy"
+  },
+  {
+   "@id": "esra:definition",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "definition"
+   },
+   "rdfs:seeAlso": {
+    "@id": "rdfs:isDefinedBy"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:NotInKeptValues"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The term that defines the field a study did not keep a value for."
+   }
+  },
+  {
+   "@id": "esra:delimiter",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "delimiter"
+   },
+   "rdfs:seeAlso": {
+    "@id": "csvw:delimiter"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Table"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The separator the text sheet was parsed with, as a character or a short description."
+   }
+  },
+  {
+   "@id": "esra:derivedCorrections",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "derived corrections"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Cell"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A person's corrections to the cell's derived block; named in the study @context, its contents are written on each property value."
+   },
+   "skos:notation": "derivedCorrections"
+  },
+  {
+   "@id": "esra:derivedFrom",
+   "@type": "owl:ObjectProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "derived from"
+   },
+   "rdfs:subPropertyOf": {
+    "@id": "prov:wasDerivedFrom"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:DerivedValue"
+   },
+   "schema:rangeIncludes": {
+    "@id": "esra:Cell"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "From a derived value to the cell whose files it was computed from."
+   },
+   "skos:notation": "derivedFrom"
+  },
+  {
+   "@id": "esra:derivedFromCount",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "derived from count"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Value"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "How many files the value was derived from, written when more files exist than are listed."
+   },
+   "skos:notation": "derivedFromCount"
+  },
+  {
+   "@id": "esra:derivedStated",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "derived stated"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Cell"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The cell's block of derived quantities stated in a researcher's metadata file, each with its source and provenance."
+   },
+   "skos:notation": "derivedStated"
+  },
+  {
+   "@id": "esra:derivedValues",
+   "@type": "owl:ObjectProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "owl:inverseOf": {
+    "@id": "esra:derivedFrom"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "derived values"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Cell"
+   },
+   "schema:rangeIncludes": {
+    "@id": "esra:DerivedValue"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "From Cell to Derived value: the inverse of \"derived from\"."
+   },
+   "skos:notation": "derivedValues"
+  },
+  {
+   "@id": "esra:diameter_cm",
+   "@type": "owl:DatatypeProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "qudt:hasUnit": {
+    "@id": "unit:CentiM"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "diameter (cm)"
+   },
+   "schema:domainIncludes": [
+    {
+     "@id": "esra:Cell"
+    },
+    {
+     "@id": "esra:Sample"
+    }
+   ],
+   "schema:unitText": "cm",
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The diameter of a cell's electrode or of a sample, in centimetres."
+   },
+   "skos:editorialNote": {
+    "@language": "en",
+    "@value": "no confirmed term"
+   },
+   "skos:notation": "diameter_cm"
+  },
+  {
+   "@id": "esra:doi",
+   "@type": "owl:DatatypeProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "DOI"
+   },
+   "rdfs:subPropertyOf": {
+    "@id": "schema:identifier"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Paper"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A paper's Digital Object Identifier."
+   },
+   "skos:notation": "doi"
+  },
+  {
+   "@id": "esra:emitted",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "emitted"
+   },
+   "schema:domainIncludes": {
+    "@id": "skos:Concept"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "Whether this origin label is used on values in the current release."
+   }
+  },
+  {
+   "@id": "esra:encoding",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "encoding"
+   },
+   "rdfs:seeAlso": {
+    "@id": "csvw:encoding"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Table"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The character encoding the text sheet was read with."
+   }
+  },
+  {
+   "@id": "esra:entity",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "entity"
+   },
+   "schema:domainIncludes": [
+    {
+     "@id": "esra:Record"
+    },
+    {
+     "@id": "esra:Value"
+    }
+   ],
+   "skos:definition": {
+    "@language": "en",
+    "@value": "On a value, a readable label of the thing it describes; on a record, the record's title."
+   }
+  },
+  {
+   "@id": "esra:entityKind",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "entity kind"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Value"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The kind of thing the value describes: study, cell, trial row, form or file."
+   },
+   "skos:notation": "entityKind"
+  },
+  {
+   "@id": "esra:evidence",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "evidence"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The texts that tie a cell to its declared material, such as a file name naming it."
+   }
+  },
+  {
+   "@id": "esra:evidenceClass",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "evidence class"
+   },
+   "schema:domainIncludes": {
+    "@id": "skos:Concept"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The broader evidence group an origin label belongs to."
+   },
+   "skos:notation": "evidenceClass"
+  },
+  {
+   "@id": "esra:evidenceCount",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "evidence count"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "How many evidence texts tie the cell to its declared material."
+   },
+   "skos:notation": "evidenceCount"
+  },
+  {
+   "@id": "esra:examples",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "examples"
+   },
+   "rdfs:seeAlso": {
+    "@id": "skos:example"
+   },
+   "schema:domainIncludes": [
+    {
+     "@id": "esra:DataCard"
+    },
+    {
+     "@id": "esra:NotInKeptValues"
+    }
+   ],
+   "skos:definition": {
+    "@language": "en",
+    "@value": "On a data card, worked queries with their grep and SPARQL forms; under unread files, example paths of files no reader opened."
+   }
+  },
+  {
+   "@id": "esra:experiment_id",
+   "@type": "owl:DatatypeProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "experiment ID"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:File"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The shared name prefix that groups the files of one multi-file measurement."
+   },
+   "skos:notation": "experiment_id"
+  },
+  {
+   "@id": "esra:fieldKey",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "field key"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The key the v1.1 scan uses for the field."
+   },
+   "skos:notation": "fieldKey"
+  },
+  {
+   "@id": "esra:file",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "file"
+   },
+   "schema:domainIncludes": [
+    {
+     "@id": "esra:Locator"
+    },
+    {
+     "@id": "esra:Table"
+    },
+    {
+     "@id": "esra:TableRow"
+    }
+   ],
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The deposited file or files the node points into, as crate file nodes."
+   }
+  },
+  {
+   "@id": "esra:fileCell",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "file cell"
+   },
+   "schema:domainIncludes": [
+    {
+     "@id": "esra:Locator"
+    },
+    {
+     "@id": "esra:Table"
+    },
+    {
+     "@id": "esra:TableRow"
+    }
+   ],
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The path of the file the node points into, as text, with several paths joined by semicolons."
+   },
+   "skos:notation": "fileCell"
+  },
+  {
+   "@id": "esra:fileCount",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "file count"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Cell"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "How many files were grouped into the cell."
+   },
+   "skos:notation": "fileCount"
+  },
+  {
+   "@id": "esra:fileTypes",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "file types"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Metric"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The file types of this study that the metric applies to."
+   },
+   "skos:notation": "fileTypes"
+  },
+  {
+   "@id": "esra:firstValues",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "first values"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Column"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The first non-empty cells of the column below its header, as a JSON list."
+   },
+   "skos:notation": "firstValues"
+  },
+  {
+   "@id": "esra:flag",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "flag"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A reader flag on the value."
+   }
+  },
+  {
+   "@id": "esra:flag/implausible_in_file",
+   "@type": "skos:Concept",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "implausible in file"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The reader found the file's value implausible (wrong dimension, outside the schema's range, or in conflict with the condition sheet). Check before use."
+   },
+   "skos:inScheme": {
+    "@id": "esra:FlagValues"
+   },
+   "skos:notation": "implausible_in_file"
+  },
+  {
+   "@id": "esra:flagNote",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "flag note"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Value"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A short explanation of the flag set on the value."
+   },
+   "skos:notation": "flagNote"
+  },
+  {
+   "@id": "esra:formNote",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "form note"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Locator"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The upload form's note on where in the paper the value is stated."
+   },
+   "skos:notation": "formNote"
+  },
+  {
+   "@id": "esra:formula",
+   "@type": "owl:DatatypeProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "formula"
+   },
+   "rdfs:seeAlso": {
+    "@id": "schema:molecularFormula"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Material"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A material's chemical formula, as the study writes it."
+   }
+  },
+  {
+   "@id": "esra:from",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "from"
+   },
+   "schema:domainIncludes": {
+    "@id": "schema:DefinedTerm"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The object type a link of the ontology starts from."
+   }
+  },
+  {
+   "@id": "esra:fromBatch",
+   "@type": "owl:ObjectProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "from batch"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Sample"
+   },
+   "schema:rangeIncludes": {
+    "@id": "esra:Batch"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "From a sample to the synthesis or purchase lot it came from."
+   },
+   "skos:notation": "fromBatch"
+  },
+  {
+   "@id": "esra:given",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "given"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Cell"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The cell's block of values supplied by the researchers' sheets, forms and file names."
+   }
+  },
+  {
+   "@id": "esra:givenConflicts",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "given conflicts"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Cell"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The cell's conflicting given values; named in the study @context, its contents are written as conflict on each property value."
+   },
+   "skos:notation": "givenConflicts"
+  },
+  {
+   "@id": "esra:givenCorrections",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "given corrections"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Cell"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A person's corrections to the cell's given block; named in the study @context, its contents are written on each property value."
+   },
+   "skos:notation": "givenCorrections"
+  },
+  {
+   "@id": "esra:givenSources",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "given sources"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Cell"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The sources of the cell's given values; named in the study @context, its contents are written as source on each property value."
+   },
+   "skos:notation": "givenSources"
+  },
+  {
+   "@id": "esra:grep",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "grep"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A grep command over the release's text views that returns the same rows as the example query."
+   }
+  },
+  {
+   "@id": "esra:hasColumn",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "has column"
+   },
+   "rdfs:seeAlso": {
+    "@id": "csvw:column"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Table"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A column of the table."
+   },
+   "skos:notation": "hasColumn"
+  },
+  {
+   "@id": "esra:hasFile",
+   "@type": "owl:ObjectProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "owl:inverseOf": {
+    "@id": "esra:partOf"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "has file"
+   },
+   "rdfs:subPropertyOf": {
+    "@id": "schema:subjectOf"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Cell"
+   },
+   "schema:rangeIncludes": {
+    "@id": "esra:File"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "From Cell to File: the inverse of \"part of\"."
+   },
+   "skos:notation": "hasFile"
+  },
+  {
+   "@id": "esra:header",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "header"
+   },
+   "rdfs:seeAlso": {
+    "@id": "csvw:title"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Column"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The header text of a column, or of the sheet column a value's source cell sits in."
+   }
+  },
+  {
+   "@id": "esra:headerRow",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "header row"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Table"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The row number of the table's header row in its sheet."
+   },
+   "skos:notation": "headerRow"
+  },
+  {
+   "@id": "esra:hierarchy",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "hierarchy"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Cell"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The ordered folder names between the study root and the cell's folder."
+   }
+  },
+  {
+   "@id": "esra:inStudy",
+   "@type": "owl:ObjectProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "in study"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Cell"
+   },
+   "schema:inverseOf": {
+    "@id": "schema:hasPart"
+   },
+   "schema:rangeIncludes": {
+    "@id": "esra:Study"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "From Cell to Study: the inverse of \"hasPart\"."
+   },
+   "skos:notation": "inStudy"
+  },
+  {
+   "@id": "esra:inputFile",
+   "@type": "owl:ObjectProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "input file"
+   },
+   "rdfs:subPropertyOf": {
+    "@id": "prov:wasDerivedFrom"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:DerivedValue"
+   },
+   "schema:rangeIncludes": {
+    "@id": "esra:File"
+   },
+   "skos:altLabel": {
+    "@language": "en",
+    "@value": "computedFrom"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The derived layer already writes this edge as esra:inputFile."
+   },
+   "skos:notation": "inputFile"
+  },
+  {
+   "@id": "esra:instrumentCorrections",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "instrument corrections"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Cell"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A person's corrections to the cell's instrument block; named in the study @context, its contents are written on each property value."
+   },
+   "skos:notation": "instrumentCorrections"
+  },
+  {
+   "@id": "esra:instrumentRead",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "instrument read"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Cell"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The cell's block of instrument settings read from its raw data files."
+   },
+   "skos:notation": "instrumentRead"
+  },
+  {
+   "@id": "esra:joinBasis",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "join basis"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:CrossStudyLink"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The keys that joined the study's node to the canonical one, such as a name key, a formula or a serial number."
+   },
+   "skos:notation": "joinBasis"
+  },
+  {
+   "@id": "esra:kind",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "kind"
+   },
+   "schema:domainIncludes": [
+    {
+     "@id": "esra:CrossStudyLink"
+    },
+    {
+     "@id": "esra:Record"
+    }
+   ],
+   "skos:definition": {
+    "@language": "en",
+    "@value": "On a cross-study link, the kind of object joined, such as material or instrument; on a record, the kind of scan entry it carries."
+   }
+  },
+  {
+   "@id": "esra:labels",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "labels"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Record"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The origin labels of the record's parts that differ from its own origin, as a JSON literal."
+   }
+  },
+  {
+   "@id": "esra:level",
+   "@type": "owl:DatatypeProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "level"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Alert"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "How serious an alert is: info (worth knowing, nothing is wrong yet) or warning (a person should look before the value is used)."
+   }
+  },
+  {
+   "@id": "esra:linkIri",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "link iri"
+   },
+   "schema:domainIncludes": {
+    "@id": "schema:DefinedTerm"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The IRI that a link of the ontology is written with in the graph."
+   },
+   "skos:notation": "linkIri"
+  },
+  {
+   "@id": "esra:linkStatus",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "link status"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:TableRow"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "Whether the scan linked this sheet row to a file, found it unlinked, or did not report."
+   },
+   "skos:notation": "linkStatus"
+  },
+  {
+   "@id": "esra:linkStatus/linked",
+   "@type": "skos:Concept",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "linked"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A file's metadata names this row."
+   },
+   "skos:inScheme": {
+    "@id": "esra:LinkStatusValues"
+   }
+  },
+  {
+   "@id": "esra:linkStatus/not_assessed",
+   "@type": "skos:Concept",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "not assessed"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The scan did not report whether any file used this row."
+   },
+   "skos:inScheme": {
+    "@id": "esra:LinkStatusValues"
+   },
+   "skos:notation": "not_assessed"
+  },
+  {
+   "@id": "esra:linkStatus/not_linked",
+   "@type": "skos:Concept",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "not linked"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The scan found this row and linked it to no file."
+   },
+   "skos:inScheme": {
+    "@id": "esra:LinkStatusValues"
+   },
+   "skos:notation": "not_linked"
+  },
+  {
+   "@id": "esra:local",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "local"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:CrossStudyLink"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The study's own node that the link joins to the canonical node."
+   }
+  },
+  {
+   "@id": "esra:locator",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "locator"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The place the value was read from."
+   }
+  },
+  {
+   "@id": "esra:locatorLevel",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "locator level"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "How precise the place is."
+   },
+   "skos:notation": "locatorLevel"
+  },
+  {
+   "@id": "esra:locatorLevel/answer",
+   "@type": "skos:Concept",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "answer"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A recorded answer to a scanner question."
+   },
+   "skos:inScheme": {
+    "@id": "esra:LocatorLevelValues"
+   }
+  },
+  {
+   "@id": "esra:locatorLevel/cell",
+   "@type": "skos:Concept",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "cell"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A sheet, a row and a column."
+   },
+   "skos:inScheme": {
+    "@id": "esra:LocatorLevelValues"
+   }
+  },
+  {
+   "@id": "esra:locatorLevel/file",
+   "@type": "skos:Concept",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "file"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "One file."
+   },
+   "skos:inScheme": {
+    "@id": "esra:LocatorLevelValues"
+   }
+  },
+  {
+   "@id": "esra:locatorLevel/file_set",
+   "@type": "skos:Concept",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "file set"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A set of files."
+   },
+   "skos:inScheme": {
+    "@id": "esra:LocatorLevelValues"
+   },
+   "skos:notation": "file_set"
+  },
+  {
+   "@id": "esra:locatorLevel/header_key",
+   "@type": "skos:Concept",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "header key"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A named key under a file header."
+   },
+   "skos:inScheme": {
+    "@id": "esra:LocatorLevelValues"
+   },
+   "skos:notation": "header_key"
+  },
+  {
+   "@id": "esra:locatorLevel/none",
+   "@type": "skos:Concept",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "none"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "No place was recorded."
+   },
+   "skos:inScheme": {
+    "@id": "esra:LocatorLevelValues"
+   }
+  },
+  {
+   "@id": "esra:locatorLevel/row",
+   "@type": "skos:Concept",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "row"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A sheet and a row."
+   },
+   "skos:inScheme": {
+    "@id": "esra:LocatorLevelValues"
+   }
+  },
+  {
+   "@id": "esra:locatorText",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "locator text"
+   },
+   "schema:domainIncludes": [
+    {
+     "@id": "esra:Column"
+    },
+    {
+     "@id": "esra:Locator"
+    }
+   ],
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A readable address of where the value sits, such as file, sheet and row; on a column, its cell range."
+   },
+   "skos:notation": "locatorText"
+  },
+  {
+   "@id": "esra:madeFrom",
+   "@type": "owl:ObjectProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "made from"
+   },
+   "rdfs:seeAlso": {
+    "@id": "prov:wasDerivedFrom"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Cell"
+   },
+   "schema:rangeIncludes": {
+    "@id": "esra:Sample"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "From a cell to the sample it was made from; stated only on a person's confirmed answer."
+   },
+   "skos:notation": "madeFrom"
+  },
+  {
+   "@id": "esra:madeOf",
+   "@type": "owl:ObjectProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "made of"
+   },
+   "schema:domainIncludes": [
+    {
+     "@id": "esra:Batch"
+    },
+    {
+     "@id": "esra:Cell"
+    },
+    {
+     "@id": "esra:Sample"
+    }
+   ],
+   "schema:rangeIncludes": {
+    "@id": "esra:Material"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "From a cell, a sample or a batch to the material it is made of."
+   },
+   "skos:notation": "madeOf"
+  },
+  {
+   "@id": "esra:mass_mg",
+   "@type": "owl:DatatypeProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "qudt:hasUnit": {
+    "@id": "unit:MilliGM"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "mass (mg)"
+   },
+   "schema:domainIncludes": [
+    {
+     "@id": "esra:Batch"
+    },
+    {
+     "@id": "esra:Cell"
+    },
+    {
+     "@id": "esra:Sample"
+    }
+   ],
+   "schema:propertyID": {
+    "@id": "emmo:EMMO_ed4af7ae_63a2_497e_bb88_2309619ea405"
+   },
+   "schema:unitText": "mg",
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The mass of a cell's pellet or electrode, of a sample or of a batch, in milligrams."
+   },
+   "skos:notation": "mass_mg"
+  },
+  {
+   "@id": "esra:match",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "match"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The key values by which a source row was matched to the cell, such as a column value or a saved answer."
+   }
+  },
+  {
+   "@id": "esra:matchLevels",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "match levels"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "How many of the cell's files matched its declared material at each level: name, formula, components or answer."
+   },
+   "skos:notation": "matchLevels"
+  },
+  {
+   "@id": "esra:material",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "material"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Cell"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The material name the cell, a component or a matched source row carries."
+   }
+  },
+  {
+   "@id": "esra:materialLink",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "material link"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Cell"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The cell's link to a declared material of the study, with match levels and evidence."
+   },
+   "skos:notation": "materialLink"
+  },
+  {
+   "@id": "esra:materialOf",
+   "@type": "owl:ObjectProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "owl:inverseOf": {
+    "@id": "esra:madeOf"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "material of"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Material"
+   },
+   "schema:rangeIncludes": [
+    {
+     "@id": "esra:Batch"
+    },
+    {
+     "@id": "esra:Cell"
+    },
+    {
+     "@id": "esra:Sample"
+    }
+   ],
+   "skos:definition": {
+    "@language": "en",
+    "@value": "From Material to Batch or Cell or Sample: the inverse of \"made of\"."
+   },
+   "skos:notation": "materialOf"
+  },
+  {
+   "@id": "esra:materialRole",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "material role"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Cell"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The role the linked declared material plays in the cell, such as electrolyte or cathode."
+   },
+   "skos:notation": "materialRole"
+  },
+  {
+   "@id": "esra:materials",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "materials"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:InterlaboratoryStudy"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "Every material name the scan's cell grouping saw in the study."
+   }
+  },
+  {
+   "@id": "esra:measured",
+   "@type": "owl:ObjectProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "owl:inverseOf": {
+    "@id": "esra:measuredBy"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "measured"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Instrument"
+   },
+   "schema:rangeIncludes": {
+    "@id": "esra:File"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "From Instrument to File: the inverse of \"measured by\"."
+   }
+  },
+  {
+   "@id": "esra:measuredBy",
+   "@type": "owl:ObjectProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "measured by"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:File"
+   },
+   "schema:rangeIncludes": {
+    "@id": "esra:Instrument"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "From a file to the instrument that recorded it."
+   },
+   "skos:notation": "measuredBy"
+  },
+  {
+   "@id": "esra:measuredIn",
+   "@type": "owl:ObjectProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "owl:inverseOf": {
+    "@id": "esra:measuredOn"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "measured in"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Sample"
+   },
+   "schema:rangeIncludes": {
+    "@id": "esra:File"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "From Sample to File: the inverse of \"measured on\"."
+   },
+   "skos:notation": "measuredIn"
+  },
+  {
+   "@id": "esra:measuredOn",
+   "@type": "owl:ObjectProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "measured on"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:File"
+   },
+   "schema:rangeIncludes": {
+    "@id": "esra:Sample"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "From a file to the sample it measured."
+   },
+   "skos:notation": "measuredOn"
+  },
+  {
+   "@id": "esra:metadataRows",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "metadata rows"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Cell"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The metadata sheet rows that describe the cell, each with its sheet file, sheet, row and whether it is empty."
+   },
+   "skos:notation": "metadataRows"
+  },
+  {
+   "@id": "esra:model",
+   "@type": "owl:DatatypeProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "model"
+   },
+   "rdfs:subPropertyOf": {
+    "@id": "schema:model"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Instrument"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The model of an instrument, as its data file reports it."
+   }
+  },
+  {
+   "@id": "esra:nCols",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "n cols"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Table"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "How many columns the table has."
+   },
+   "skos:notation": "nCols"
+  },
+  {
+   "@id": "esra:nDistinct",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "n distinct"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Column"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "How many distinct values the column holds below its header."
+   },
+   "skos:notation": "nDistinct"
+  },
+  {
+   "@id": "esra:nRows",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "n rows"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Table"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "How many rows the table has."
+   },
+   "skos:notation": "nRows"
+  },
+  {
+   "@id": "esra:nValues",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "n values"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Column"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "How many non-empty cells the column holds below its header."
+   },
+   "skos:notation": "nValues"
+  },
+  {
+   "@id": "esra:nameKey",
+   "@type": "owl:DatatypeProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "name key"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Material"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The declared name without its trailing bracket, case, spacing and punctuation ignored."
+   },
+   "skos:notation": "nameKey"
+  },
+  {
+   "@id": "esra:needs",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "needs"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Metric"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The inputs the metric requires, each with its accepted key spellings and whether the kept values record it."
+   }
+  },
+  {
+   "@id": "esra:note",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "note"
+   },
+   "rdfs:seeAlso": {
+    "@id": "skos:note"
+   },
+   "schema:domainIncludes": [
+    {
+     "@id": "esra:SharedIdentifier"
+    },
+    {
+     "@id": "esra:Value"
+    },
+    {
+     "@id": "schema:DefinedTerm"
+    }
+   ],
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A short free-text remark on the node it sits on, such as a value's note, a source's reading or why a term is unconfirmed."
+   }
+  },
+  {
+   "@id": "esra:notes",
+   "@type": "owl:DatatypeProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "notes"
+   },
+   "rdfs:seeAlso": {
+    "@id": "skos:note"
+   },
+   "schema:domainIncludes": [
+    {
+     "@id": "esra:Cell"
+    },
+    {
+     "@id": "esra:File"
+    },
+    {
+     "@id": "esra:Sample"
+    }
+   ],
+   "skos:definition": {
+    "@language": "en",
+    "@value": "Free text a researcher wrote about a cell, a sample or a file."
+   }
+  },
+  {
+   "@id": "esra:occurrences",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "occurrences"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:SharedIdentifier"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The places in this study where the shared identifier text occurs, as a JSON list."
+   }
+  },
+  {
+   "@id": "esra:ontologyLabel",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "ontology label"
+   },
+   "rdfs:seeAlso": {
+    "@id": "skos:prefLabel"
+   },
+   "schema:domainIncludes": {
+    "@id": "schema:DefinedTerm"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The preferred label of the ontology term the field maps to."
+   },
+   "skos:notation": "ontologyLabel"
+  },
+  {
+   "@id": "esra:optional",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "optional"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Metric"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The inputs the metric can use but does not require, each with its key spellings and whether the kept values record it."
+   }
+  },
+  {
+   "@id": "esra:orcid",
+   "@type": "owl:DatatypeProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "ORCID iD"
+   },
+   "rdfs:subPropertyOf": {
+    "@id": "schema:identifier"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Person"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A person's ORCID iD."
+   },
+   "skos:notation": "orcid"
+  },
+  {
+   "@id": "esra:origin",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "origin"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "One origin label from the list above."
+   }
+  },
+  {
+   "@id": "esra:origin/ai_extracted_unreviewed",
+   "@type": "skos:Concept",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "ai extracted unreviewed"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "Extracted by an AI and not reviewed."
+   },
+   "skos:inScheme": {
+    "@id": "esra:OriginValues"
+   },
+   "skos:notation": "ai_extracted_unreviewed",
+   "skos:scopeNote": {
+    "@language": "en",
+    "@value": "Evidence class not_deposit_evidence: Not read from the deposit."
+   }
+  },
+  {
+   "@id": "esra:origin/author_result",
+   "@type": "skos:Concept",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "author result"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "Computed or picked by the authors with their own software or in their own sheet (a result column kept as they computed it, or a fit or peak-pick report they saved as a text or XML file). A result, not an input; the ESRA scan did not compute it."
+   },
+   "skos:inScheme": {
+    "@id": "esra:OriginValues"
+   },
+   "skos:notation": "author_result",
+   "skos:scopeNote": {
+    "@language": "en",
+    "@value": "Evidence class deposit_evidence: Read or taken from what the authors deposited."
+   }
+  },
+  {
+   "@id": "esra:origin/author_sheet",
+   "@type": "skos:Concept",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "author sheet"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "Read from a spreadsheet or table the authors deposited."
+   },
+   "skos:inScheme": {
+    "@id": "esra:OriginValues"
+   },
+   "skos:notation": "author_sheet",
+   "skos:scopeNote": {
+    "@language": "en",
+    "@value": "Evidence class deposit_evidence: Read or taken from what the authors deposited."
+   }
+  },
+  {
+   "@id": "esra:origin/derived",
+   "@type": "skos:Concept",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "derived"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "Computed by an ESRA derivation from other values."
+   },
+   "skos:inScheme": {
+    "@id": "esra:OriginValues"
+   },
+   "skos:scopeNote": {
+    "@language": "en",
+    "@value": "Evidence class computed: Computed by an ESRA derivation from other values."
+   }
+  },
+  {
+   "@id": "esra:origin/file_name",
+   "@type": "skos:Concept",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "file name"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "Read from a deposited file name or folder name, or from the folder layout."
+   },
+   "skos:inScheme": {
+    "@id": "esra:OriginValues"
+   },
+   "skos:notation": "file_name",
+   "skos:scopeNote": {
+    "@language": "en",
+    "@value": "Evidence class deposit_evidence_weak: Taken from a name, not from a file's content."
+   }
+  },
+  {
+   "@id": "esra:origin/form_confirmed",
+   "@type": "skos:Concept",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "form confirmed"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "In the upload form, with a recorded author confirmation."
+   },
+   "skos:inScheme": {
+    "@id": "esra:OriginValues"
+   },
+   "skos:notation": "form_confirmed",
+   "skos:scopeNote": {
+    "@language": "en",
+    "@value": "Evidence class stated_by_the_author: Typed or confirmed by the author in the upload form."
+   }
+  },
+  {
+   "@id": "esra:origin/form_prefilled_unconfirmed",
+   "@type": "skos:Concept",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "form prefilled unconfirmed"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "In the upload form, with no recorded author confirmation and no paper citation."
+   },
+   "skos:inScheme": {
+    "@id": "esra:OriginValues"
+   },
+   "skos:notation": "form_prefilled_unconfirmed",
+   "skos:scopeNote": {
+    "@language": "en",
+    "@value": "Evidence class not_deposit_evidence: Not read from the deposit."
+   }
+  },
+  {
+   "@id": "esra:origin/instrument_header",
+   "@type": "skos:Concept",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "instrument header"
+   },
+   "skos:broader": {
+    "@id": "esra:origin/read_from_file"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "Read from the header or settings block of a deposited file. Defined, not emitted until a reader declares it per key."
+   },
+   "skos:inScheme": {
+    "@id": "esra:OriginValues"
+   },
+   "skos:notation": "instrument_header",
+   "skos:scopeNote": {
+    "@language": "en",
+    "@value": "Evidence class deposit_evidence: Read or taken from what the authors deposited."
+   }
+  },
+  {
+   "@id": "esra:origin/instrument_result",
+   "@type": "skos:Concept",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "instrument result"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "Computed by the instrument's own software from its measurement and written into the file (a result block such as a peak potential or the charge per segment). Not computed by the authors and not by the ESRA scan."
+   },
+   "skos:inScheme": {
+    "@id": "esra:OriginValues"
+   },
+   "skos:notation": "instrument_result",
+   "skos:scopeNote": {
+    "@language": "en",
+    "@value": "Evidence class deposit_evidence: Read or taken from what the authors deposited."
+   }
+  },
+  {
+   "@id": "esra:origin/measured_in_file",
+   "@type": "skos:Concept",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "measured in file"
+   },
+   "skos:broader": {
+    "@id": "esra:origin/read_from_file"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "Computed by a reader from the data columns of a deposited file. Defined, not emitted until a reader declares it per key."
+   },
+   "skos:inScheme": {
+    "@id": "esra:OriginValues"
+   },
+   "skos:notation": "measured_in_file",
+   "skos:scopeNote": {
+    "@language": "en",
+    "@value": "Evidence class deposit_evidence: Read or taken from what the authors deposited."
+   }
+  },
+  {
+   "@id": "esra:origin/person_answer",
+   "@type": "skos:Concept",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "person answer"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A person answered a scanner question (a link, a role, a file choice). Recorded by answer id."
+   },
+   "skos:inScheme": {
+    "@id": "esra:OriginValues"
+   },
+   "skos:notation": "person_answer",
+   "skos:scopeNote": {
+    "@language": "en",
+    "@value": "Evidence class a_decision: A person's decision, not a measurement."
+   }
+  },
+  {
+   "@id": "esra:origin/read_from_file",
+   "@type": "skos:Concept",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "read from file"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "Read or computed by a reader from a deposited instrument file. A header or settings value, or a span, count or range over its data columns."
+   },
+   "skos:inScheme": {
+    "@id": "esra:OriginValues"
+   },
+   "skos:notation": "read_from_file",
+   "skos:scopeNote": {
+    "@language": "en",
+    "@value": "Evidence class deposit_evidence: Read or taken from what the authors deposited."
+   }
+  },
+  {
+   "@id": "esra:origin/scan_record",
+   "@type": "skos:Concept",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "scan record"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "Written by the scanner about the deposit itself. File type, size, which reader ran, counts, link findings."
+   },
+   "skos:inScheme": {
+    "@id": "esra:OriginValues"
+   },
+   "skos:notation": "scan_record",
+   "skos:scopeNote": {
+    "@language": "en",
+    "@value": "Evidence class about_the_deposit: A fact the scanner states about the deposit itself."
+   }
+  },
+  {
+   "@id": "esra:origin/stated_in_paper",
+   "@type": "skos:Concept",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "stated in paper"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "In the upload form or a material declaration, which cites the paper as its source."
+   },
+   "skos:inScheme": {
+    "@id": "esra:OriginValues"
+   },
+   "skos:notation": "stated_in_paper",
+   "skos:scopeNote": {
+    "@language": "en",
+    "@value": "Evidence class not_deposit_evidence: Not read from the deposit."
+   }
+  },
+  {
+   "@id": "esra:originBasis",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "origin basis"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The v1.1 pointer of the tag or source entry that decided the origin."
+   },
+   "skos:notation": "originBasis"
+  },
+  {
+   "@id": "esra:otherStudies",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "other studies"
+   },
+   "schema:domainIncludes": [
+    {
+     "@id": "esra:CrossStudyLink"
+    },
+    {
+     "@id": "esra:SharedIdentifier"
+    }
+   ],
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The other studies holding the same object or identifier text, with their own names or occurrences, as a JSON list."
+   },
+   "skos:notation": "otherStudies"
+  },
+  {
+   "@id": "esra:outputs",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "outputs"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Metric"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The quantities the metric produces, each with its name, unit and ontology term."
+   }
+  },
+  {
+   "@id": "esra:partOf",
+   "@type": "owl:ObjectProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "part of"
+   },
+   "rdfs:subPropertyOf": {
+    "@id": "schema:about"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:File"
+   },
+   "schema:rangeIncludes": {
+    "@id": "esra:Cell"
+   },
+   "skos:altLabel": {
+    "@language": "en",
+    "@value": "about"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "From a file to the cell it is about (a data file describes a cell; it is not a physical part of it)."
+   },
+   "skos:notation": "partOf"
+  },
+  {
+   "@id": "esra:positionNamed",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "position named"
+   },
+   "schema:domainIncludes": {
+    "@id": "schema:DefinedTerm"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "Whether the field key was named from the column's position because its sheet gives no header."
+   },
+   "skos:notation": "positionNamed"
+  },
+  {
+   "@id": "esra:provenance",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "provenance"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:PropertyValue"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A free-text statement of how a derived value was supplied and what to check it against."
+   }
+  },
+  {
+   "@id": "esra:queryArgs",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "query args"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Count"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The arguments the count's named query was run with."
+   },
+   "skos:notation": "queryArgs"
+  },
+  {
+   "@id": "esra:queryId",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "query ID"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Count"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The identifier of the named query that produces the count."
+   },
+   "skos:notation": "queryId"
+  },
+  {
+   "@id": "esra:questionId",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "question ID"
+   },
+   "schema:domainIncludes": {
+    "@id": "prov:Activity"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The identifier of the scan question a person's saved answer replied to."
+   },
+   "skos:notation": "questionId"
+  },
+  {
+   "@id": "esra:questions",
+   "@type": "owl:ObjectProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "owl:inverseOf": {
+    "@id": "esra:asksAbout"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "questions"
+   },
+   "schema:domainIncludes": [
+    {
+     "@id": "esra:Cell"
+    },
+    {
+     "@id": "esra:File"
+    },
+    {
+     "@id": "esra:Material"
+    },
+    {
+     "@id": "esra:Sample"
+    }
+   ],
+   "schema:rangeIncludes": {
+    "@id": "esra:Question"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "From Cell or File or Material or Sample to Question: the inverse of \"asks about\"."
+   }
+  },
+  {
+   "@id": "esra:raisedOn",
+   "@type": "owl:ObjectProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "raised on"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Alert"
+   },
+   "schema:rangeIncludes": [
+    {
+     "@id": "esra:Cell"
+    },
+    {
+     "@id": "esra:DerivedValue"
+    },
+    {
+     "@id": "esra:File"
+    },
+    {
+     "@id": "esra:Material"
+    },
+    {
+     "@id": "esra:Question"
+    },
+    {
+     "@id": "esra:Sample"
+    },
+    {
+     "@id": "esra:Study"
+    }
+   ],
+   "skos:definition": {
+    "@language": "en",
+    "@value": "From an alert to the node it is about."
+   },
+   "skos:notation": "raisedOn"
+  },
+  {
+   "@id": "esra:readersThatOpened",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "readers that opened"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:NotInKeptValues"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The readers that opened files of the technique, each with whether it keeps the field and how many files it read."
+   },
+   "skos:notation": "readersThatOpened"
+  },
+  {
+   "@id": "esra:reason",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "reason"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Table"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "Why the table has no CSV copy and is given as a reference only."
+   }
+  },
+  {
+   "@id": "esra:recordedFor",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "recorded for"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:NotInKeptValues"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "How many entities of the technique record the field, out of how many."
+   },
+   "skos:notation": "recordedFor"
+  },
+  {
+   "@id": "esra:recordedOrigins",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "recorded origins"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:NotInKeptValues"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The origin labels of the values recorded for the field in this study."
+   },
+   "skos:notation": "recordedOrigins"
+  },
+  {
+   "@id": "esra:releaseVersion",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "release version"
+   },
+   "rdfs:seeAlso": {
+    "@id": "schema:version"
+   },
+   "schema:domainIncludes": {
+    "@id": "prov:Activity"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The version of the release the graph was built for."
+   },
+   "skos:notation": "releaseVersion"
+  },
+  {
+   "@id": "esra:repaired",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "repaired"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Table"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A description of the narrow in-memory repair that let a damaged sheet part be read."
+   }
+  },
+  {
+   "@id": "esra:required",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "required"
+   },
+   "schema:domainIncludes": [
+    {
+     "@id": "esra:NotInKeptValues"
+    },
+    {
+     "@id": "schema:DefinedTerm"
+    }
+   ],
+   "skos:definition": {
+    "@language": "en",
+    "@value": "Whether the upload form requires the field for its technique."
+   }
+  },
+  {
+   "@id": "esra:researcher",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "researcher"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Cell"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The researcher name the cell, or a matched source row, carries."
+   }
+  },
+  {
+   "@id": "esra:researcherCount",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "researcher count"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:InterlaboratoryStudy"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "How many researchers the study's cells name."
+   },
+   "skos:notation": "researcherCount"
+  },
+  {
+   "@id": "esra:researchers",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "researchers"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:InterlaboratoryStudy"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "Every researcher name the study's cells carry."
+   }
+  },
+  {
+   "@id": "esra:reviewStatus",
+   "@type": "owl:DatatypeProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "review status"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Material"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "Whether a person reviewed the declaration (reviewed, unreviewed, unstated); only reviewed is joined across studies."
+   },
+   "skos:notation": "reviewStatus"
+  },
+  {
+   "@id": "esra:role",
+   "@type": "owl:DatatypeProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "role"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Material"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "What the material does in the study (cathode, electrolyte, ...), from the declaration or the form."
+   }
+  },
+  {
+   "@id": "esra:row",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "row"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:TableRow"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The sheet row number of a table row, or of a value's source cell or a metadata row."
+   }
+  },
+  {
+   "@id": "esra:rowLocator",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "row locator"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Table"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The address template of any cell in the table: file, sheet, column letter and row."
+   },
+   "skos:notation": "rowLocator"
+  },
+  {
+   "@id": "esra:sameMaterialAs",
+   "@type": [
+    "owl:ObjectProperty",
+    "owl:SymmetricProperty"
+   ],
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "same material as"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Material"
+   },
+   "schema:rangeIncludes": {
+    "@id": "esra:Material"
+   },
+   "skos:altLabel": {
+    "@language": "en",
+    "@value": "sameAs"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A confirmed answer that two material names are one compound."
+   },
+   "skos:notation": "sameMaterialAs"
+  },
+  {
+   "@id": "esra:samplesFrom",
+   "@type": "owl:ObjectProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "owl:inverseOf": {
+    "@id": "esra:fromBatch"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "samples from"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Batch"
+   },
+   "schema:rangeIncludes": {
+    "@id": "esra:Sample"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "From Batch to Sample: the inverse of \"from batch\"."
+   },
+   "skos:notation": "samplesFrom"
+  },
+  {
+   "@id": "esra:scannerCommit",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "scanner commit"
+   },
+   "schema:domainIncludes": {
+    "@id": "prov:Activity"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The git commit of the scanner that ran the scan."
+   },
+   "skos:notation": "scannerCommit"
+  },
+  {
+   "@id": "esra:scannerVersion",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "scanner version"
+   },
+   "rdfs:seeAlso": {
+    "@id": "schema:softwareVersion"
+   },
+   "schema:domainIncludes": {
+    "@id": "prov:Activity"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The version name of the scanner that ran the scan."
+   },
+   "skos:notation": "scannerVersion"
+  },
+  {
+   "@id": "esra:separator_thickness_um",
+   "@type": "owl:DatatypeProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "qudt:hasUnit": {
+    "@id": "unit:MicroM"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "separator thickness (um)"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Cell"
+   },
+   "schema:propertyID": {
+    "@id": "echem:electrochemistry_47288277_4aed_447e_b659_0c975d031406"
+   },
+   "schema:unitText": "um",
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The thickness of a cell's separator, in micrometres."
+   },
+   "skos:notation": "separator_thickness_um"
+  },
+  {
+   "@id": "esra:serial",
+   "@type": "owl:DatatypeProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "serial"
+   },
+   "rdfs:subPropertyOf": {
+    "@id": "schema:serialNumber"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Instrument"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The serial number of an instrument, as its data file reports it."
+   }
+  },
+  {
+   "@id": "esra:sha1",
+   "@type": "owl:DatatypeProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "SHA-1"
+   },
+   "rdfs:seeAlso": {
+    "@id": "spdx:checksum"
+   },
+   "schema:domainIncludes": [
+    {
+     "@id": "esra:File"
+    },
+    {
+     "@id": "esra:Question"
+    }
+   ],
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A SHA-1 digest the scan keeps, for a file to notice when its content changes, for a question to give it a stable identity."
+   },
+   "skos:notation": "sha1"
+  },
+  {
+   "@id": "esra:sharedIdentifier",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "shared identifier"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The same identifier text in two studies. Not confirmed to name the same object."
+   },
+   "skos:notation": "sharedIdentifier"
+  },
+  {
+   "@id": "esra:sheet",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "sheet"
+   },
+   "schema:domainIncludes": [
+    {
+     "@id": "esra:Table"
+    },
+    {
+     "@id": "esra:TableRow"
+    }
+   ],
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The name of the sheet a table, a table row or a value's source cell is in."
+   }
+  },
+  {
+   "@id": "esra:source",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "source"
+   },
+   "rdfs:seeAlso": {
+    "@id": "dcterms:source"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:PropertyValue"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "Where a value came from: on a property value, its source rows; on a derived entry or a component, a text naming the source."
+   }
+  },
+  {
+   "@id": "esra:sourceColumn",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "source column"
+   },
+   "schema:domainIncludes": {
+    "@id": "schema:DefinedTerm"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The column letter of the sheet column a position-named field comes from."
+   },
+   "skos:notation": "sourceColumn"
+  },
+  {
+   "@id": "esra:sourceEntry",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "source entry"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Locator"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The scan's source entry the locator was built from, as a JSON literal."
+   },
+   "skos:notation": "sourceEntry"
+  },
+  {
+   "@id": "esra:sourceFile",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "source file"
+   },
+   "schema:domainIncludes": {
+    "@id": "schema:DefinedTerm"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The path of the file a value's source row, or a position-named field, comes from."
+   },
+   "skos:notation": "sourceFile"
+  },
+  {
+   "@id": "esra:sourceKind",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "source kind"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The kind of source a value came from, such as a sheet row by name or a file name part."
+   },
+   "skos:notation": "sourceKind"
+  },
+  {
+   "@id": "esra:sourcePointer",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "source pointer"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Locator"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The JSON pointer into the scan output of the entry the node was read from."
+   },
+   "skos:notation": "sourcePointer"
+  },
+  {
+   "@id": "esra:sourceSheet",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "source sheet"
+   },
+   "schema:domainIncludes": {
+    "@id": "schema:DefinedTerm"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The sheet name of the sheet column a position-named field comes from."
+   },
+   "skos:notation": "sourceSheet"
+  },
+  {
+   "@id": "esra:sparql",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "sparql"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A SPARQL query over the study graph that returns the example's rows."
+   }
+  },
+  {
+   "@id": "esra:stack_pressure_mpa",
+   "@type": "owl:DatatypeProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "qudt:hasUnit": {
+    "@id": "unit:MegaPA"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "stack pressure (MPa)"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Cell"
+   },
+   "schema:propertyID": {
+    "@id": "emmo:EMMO_50a44256_9dc5_434b_bad4_74a4d9a29989"
+   },
+   "schema:unitText": "MPa",
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The pressure held on a cell's stack while it was measured, in megapascals."
+   },
+   "skos:notation": "stack_pressure_mpa"
+  },
+  {
+   "@id": "esra:stage",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "stage"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Cell"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The experiment category the cell's folders name, or the stage label a matched source row carries."
+   }
+  },
+  {
+   "@id": "esra:statedIn",
+   "@type": "owl:ObjectProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "stated in"
+   },
+   "schema:domainIncludes": {
+    "@id": "schema:PropertyValue"
+   },
+   "schema:rangeIncludes": {
+    "@id": "esra:Conditions"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "From a stated value to the study's conditions sheet that states it, with its sheet, row and column."
+   },
+   "skos:notation": "statedIn"
+  },
+  {
+   "@id": "esra:states",
+   "@type": "owl:ObjectProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "owl:inverseOf": {
+    "@id": "esra:statedIn"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "states"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Conditions"
+   },
+   "schema:rangeIncludes": {
+    "@id": "schema:PropertyValue"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "From Conditions to PropertyValue: the inverse of \"stated in\"."
+   }
+  },
+  {
+   "@id": "esra:status",
+   "@type": [
+    "owl:DatatypeProperty",
+    "rdf:Property"
+   ],
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/ontology.yaml",
+    "Data_pipeline/ontology/vocabulary/semantic.yaml"
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "status"
+   },
+   "schema:domainIncludes": [
+    {
+     "@id": "esra:Action"
+    },
+    {
+     "@id": "esra:Alert"
+    },
+    {
+     "@id": "esra:DerivedValue"
+    },
+    {
+     "@id": "esra:Question"
+    }
+   ],
+   "skos:definition": {
+    "@language": "en",
+    "@value": "One status from the list above."
+   }
+  },
+  {
+   "@id": "esra:status/not_in_kept_values",
+   "@type": "skos:Concept",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "not in kept values"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "No value read from the deposit maps to the field. A value labelled stated_in_paper or form_prefilled_unconfirmed may still exist for it; the row says so. The readers that opened the technique's files are named, and the files may still hold it."
+   },
+   "skos:inScheme": {
+    "@id": "esra:StatusValues"
+   },
+   "skos:notation": "not_in_kept_values"
+  },
+  {
+   "@id": "esra:status/not_read",
+   "@type": "skos:Concept",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "not read"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The deposit holds files that no reader opened."
+   },
+   "skos:inScheme": {
+    "@id": "esra:StatusValues"
+   },
+   "skos:notation": "not_read"
+  },
+  {
+   "@id": "esra:status/recorded_partly",
+   "@type": "skos:Concept",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "recorded partly"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The field is recorded for some entities of the technique and not for the others."
+   },
+   "skos:inScheme": {
+    "@id": "esra:StatusValues"
+   },
+   "skos:notation": "recorded_partly"
+  },
+  {
+   "@id": "esra:status/withheld",
+   "@type": "skos:Concept",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "withheld"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "A value was in the deposit and was withheld as an author-stated result. No number comes back."
+   },
+   "skos:inScheme": {
+    "@id": "esra:StatusValues"
+   }
+  },
+  {
+   "@id": "esra:supersededBy",
+   "@type": "owl:ObjectProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "owl:inverseOf": {
+    "@id": "esra:supersedes"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "superseded by"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Action"
+   },
+   "schema:rangeIncludes": {
+    "@id": "esra:Action"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "From Action to Action: the inverse of \"supersedes\"."
+   },
+   "skos:notation": "supersededBy"
+  },
+  {
+   "@id": "esra:supersedes",
+   "@type": "owl:ObjectProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "supersedes"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Action"
+   },
+   "schema:rangeIncludes": {
+    "@id": "esra:Action"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "From an action to the earlier action it replaces or resolves (a person's approval of a proposal, for example)."
+   }
+  },
+  {
+   "@id": "esra:table",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "table"
+   },
+   "schema:domainIncludes": [
+    {
+     "@id": "esra:Column"
+    },
+    {
+     "@id": "esra:TableRow"
+    }
+   ],
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The table a column or a table row belongs to: an IRI on a column, the CSV path on a table row."
+   }
+  },
+  {
+   "@id": "esra:tableKind",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "table kind"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Table"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The kind of table: a full sheet copied whole, an instrument data table, or a table of linked rows."
+   },
+   "skos:notation": "tableKind"
+  },
+  {
+   "@id": "esra:tableReference",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "table reference"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Table"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "Whether the table is given as a reference with its size and columns but no CSV copy."
+   },
+   "skos:notation": "tableReference"
+  },
+  {
+   "@id": "esra:technique",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "technique"
+   },
+   "schema:domainIncludes": [
+    {
+     "@id": "esra:Cell"
+    },
+    {
+     "@id": "esra:NotInKeptValues"
+    },
+    {
+     "@id": "esra:Value"
+    },
+    {
+     "@id": "schema:DefinedTerm"
+    }
+   ],
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The ESRA experiment type the node belongs to."
+   }
+  },
+  {
+   "@id": "esra:technique_evidence",
+   "@type": "owl:DatatypeProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "technique evidence"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:File"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The line of a data file that decided which technique the file records (a step name, for example), kept so the decision can be checked."
+   },
+   "skos:notation": "technique_evidence"
+  },
+  {
+   "@id": "esra:temperature_c",
+   "@type": "owl:DatatypeProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "qudt:hasUnit": {
+    "@id": "unit:DEG_C"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "temperature (degC)"
+   },
+   "schema:domainIncludes": [
+    {
+     "@id": "esra:Cell"
+    },
+    {
+     "@id": "esra:File"
+    }
+   ],
+   "schema:propertyID": {
+    "@id": "emmo:EMMO_66bc9029_f473_45ff_bab9_c3509ff37a22"
+   },
+   "schema:unitText": "degC",
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The temperature a cell was measured at, or that a file states, in degrees Celsius."
+   },
+   "skos:notation": "temperature_c"
+  },
+  {
+   "@id": "esra:text",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "text"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:SharedIdentifier"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "On a shared identifier, the identifier text itself; on a value's source, the file name part read as the value."
+   }
+  },
+  {
+   "@id": "esra:thickness_cm",
+   "@type": "owl:DatatypeProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "qudt:hasUnit": {
+    "@id": "unit:CentiM"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "thickness (cm)"
+   },
+   "schema:domainIncludes": [
+    {
+     "@id": "esra:Cell"
+    },
+    {
+     "@id": "esra:Sample"
+    }
+   ],
+   "schema:propertyID": {
+    "@id": "emmo:EMMO_43003c86_9d15_433b_9789_ee2940920656"
+   },
+   "schema:unitText": "cm",
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The thickness of a cell's pellet or electrode, or of a sample, in centimetres."
+   },
+   "skos:notation": "thickness_cm"
+  },
+  {
+   "@id": "esra:title",
+   "@type": "owl:DatatypeProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "title"
+   },
+   "rdfs:subPropertyOf": {
+    "@id": "dcterms:title"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Paper"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The title of a paper."
+   }
+  },
+  {
+   "@id": "esra:to",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "to"
+   },
+   "schema:domainIncludes": {
+    "@id": "schema:DefinedTerm"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The object type or types a link of the ontology points to."
+   }
+  },
+  {
+   "@id": "esra:tool",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "tool"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Metric"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The ESRA tool function that computes the metric."
+   }
+  },
+  {
+   "@id": "esra:trial",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "trial"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Cell"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The trial number of the cell, or of a matched source row."
+   }
+  },
+  {
+   "@id": "esra:trialCount",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "trial count"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:InterlaboratoryStudy"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "How many cells the study document lists."
+   },
+   "skos:notation": "trialCount"
+  },
+  {
+   "@id": "esra:type",
+   "@type": "owl:DatatypeProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "type"
+   },
+   "rdfs:seeAlso": {
+    "@id": "dcterms:type"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:File"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The experiment type the scan gave a file (EIS, Cycling, TEM and the other upload types)."
+   }
+  },
+  {
+   "@id": "esra:unit",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "unit"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The unit a value's source states, or the unit of a column given in the table metadata."
+   }
+  },
+  {
+   "@id": "esra:unitBasis",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "unit basis"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "How the unit of a read_from_file value was known."
+   },
+   "skos:notation": "unitBasis"
+  },
+  {
+   "@id": "esra:unitBasis/assumed_by_format_convention",
+   "@type": "skos:Concept",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "assumed by format convention"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The file states no unit and the format's documented convention was used."
+   },
+   "skos:inScheme": {
+    "@id": "esra:UnitBasisValues"
+   },
+   "skos:notation": "assumed_by_format_convention"
+  },
+  {
+   "@id": "esra:unitBasis/converted_from_file_unit",
+   "@type": "skos:Concept",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "converted from file unit"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The reader converted the file's unit to the field unit."
+   },
+   "skos:inScheme": {
+    "@id": "esra:UnitBasisValues"
+   },
+   "skos:notation": "converted_from_file_unit"
+  },
+  {
+   "@id": "esra:unitBasis/stated_in_file",
+   "@type": "skos:Concept",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "stated in file"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The file states the unit."
+   },
+   "skos:inScheme": {
+    "@id": "esra:UnitBasisValues"
+   },
+   "skos:notation": "stated_in_file"
+  },
+  {
+   "@id": "esra:unitKey",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "unit key"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Value"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The key whose name suffix gives the value's unit, when the unit was read from a suffix."
+   },
+   "skos:notation": "unitKey"
+  },
+  {
+   "@id": "esra:unitPointer",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "unit pointer"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Value"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The JSON pointer into the scan output where the value's unit was found."
+   },
+   "skos:notation": "unitPointer"
+  },
+  {
+   "@id": "esra:unitVia",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "unit via"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Value"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "How the value's unit was found: as the text at the unit pointer, as a suffix of that text, or as a suffix of the key."
+   },
+   "skos:notation": "unitVia"
+  },
+  {
+   "@id": "esra:unreadFiles",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "unread files"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:NotInKeptValues"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "How many tabular and other files of the technique no reader opened, with example paths."
+   },
+   "skos:notation": "unreadFiles"
+  },
+  {
+   "@id": "esra:v11Pointer",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-10-29"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/semantic.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "v1.1 pointer"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "JSON Pointer (RFC 6901) of the value in the v1.1 scan."
+   },
+   "skos:notation": "v11Pointer"
+  },
+  {
+   "@id": "esra:validation",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "validation"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Metric"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The name of the validation set the metric was checked against, if any."
+   }
+  },
+  {
+   "@id": "esra:valueType",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "value type"
+   },
+   "schema:domainIncludes": {
+    "@id": "schema:DefinedTerm"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "Whether the field holds a number or text."
+   },
+   "skos:notation": "valueType"
+  },
+  {
+   "@id": "esra:values",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "values"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Column"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "Every distinct value of the column in first-seen order, written only when there are few enough."
+   }
+  },
+  {
+   "@id": "esra:variantOf",
+   "@type": "owl:ObjectProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "variant of"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Material"
+   },
+   "schema:rangeIncludes": {
+    "@id": "esra:Material"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "From a material to the canonical material it is a variant of."
+   },
+   "skos:notation": "variantOf"
+  },
+  {
+   "@id": "esra:variants",
+   "@type": "owl:ObjectProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-13"
+   },
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/ontology.yaml",
+   "owl:inverseOf": {
+    "@id": "esra:variantOf"
+   },
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "variants"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Material"
+   },
+   "schema:rangeIncludes": {
+    "@id": "esra:Material"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "From Material to Material: the inverse of \"variant of\"."
+   }
+  },
+  {
+   "@id": "esra:vendor",
+   "@type": "owl:DatatypeProperty",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml"
+   ],
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "vendor"
+   },
+   "rdfs:seeAlso": {
+    "@id": "schema:manufacturer"
+   },
+   "schema:domainIncludes": {
+    "@id": "esra:Instrument"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The maker of an instrument, as its data file reports it."
+   }
+  },
+  {
+   "@id": "esra:verifiedBy",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "verified by"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "How the example's count was checked against the written view files."
+   },
+   "skos:notation": "verifiedBy"
+  },
+  {
+   "@id": "esra:writtenByReader",
+   "@type": "rdf:Property",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:source": "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+   "rdfs:isDefinedBy": {
+    "@id": "https://data.energystoragera.org/ns"
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "written by reader"
+   },
+   "schema:domainIncludes": {
+    "@id": "schema:DefinedTerm"
+   },
+   "skos:definition": {
+    "@language": "en",
+    "@value": "The readers that write values under this field key."
+   },
+   "skos:notation": "writtenByReader"
+  },
+  {
+   "@id": "https://data.energystoragera.org/ns",
+   "@type": "owl:Ontology",
+   "dcterms:creator": "ESRA platform",
+   "dcterms:date": {
+    "@type": "xsd:date",
+    "@value": "2026-11-15"
+   },
+   "dcterms:description": {
+    "@language": "en",
+    "@value": "The terms the Energy Storage Research Alliance data platform adds on top of EMMO and BattINFO: how a deposited battery study is put together (study, cell, sample, batch, file, instrument) and where every recorded value came from (read from a file, stated by the author, computed, answered by a person, or extracted by an AI and not yet reviewed). Measured quantities themselves are named with EMMO, BattINFO, CHAMEO and QUDT terms; an ESRA term exists only where those have none."
+   },
+   "dcterms:license": {
+    "@id": "https://creativecommons.org/licenses/by/4.0/"
+   },
+   "dcterms:publisher": "Energy Storage Research Alliance, Argonne National Laboratory",
+   "dcterms:source": [
+    "Data_pipeline/ontology/vocabulary/annotations.yaml",
+    "Data_pipeline/ontology/vocabulary/derived.yaml",
+    "Data_pipeline/ontology/vocabulary/graph_terms.yaml",
+    "Data_pipeline/ontology/vocabulary/ontology.yaml",
+    "Data_pipeline/ontology/vocabulary/semantic.yaml"
+   ],
+   "dcterms:title": {
+    "@language": "en",
+    "@value": "ESRA ontology"
+   },
+   "owl:versionIRI": {
+    "@id": "https://data.energystoragera.org/ns/2026-11-15"
+   },
+   "owl:versionInfo": "2026-11-15",
+   "rdfs:comment": {
+    "@language": "en",
+    "@value": "The terms of the ESRA namespace: the classes, properties and links of the working graph, the vocabulary of the semantic layer and the terms a person approved. Generated by Data_pipeline/ontology/build_esra_ttl.py."
+   },
+   "rdfs:label": {
+    "@language": "en",
+    "@value": "ESRA ontology"
+   },
+   "rdfs:seeAlso": [
+    {
+     "@id": "https://github.com/MusannaGalib/esra-ontology"
+    },
+    {
+     "@id": "https://w3id.org/emmo"
+    },
+    {
+     "@id": "https://w3id.org/emmo/domain/battery"
+    }
+   ],
+   "vann:preferredNamespacePrefix": "esra",
+   "vann:preferredNamespaceUri": {
+    "@type": "xsd:anyURI",
+    "@value": "https://data.energystoragera.org/ns#"
+   }
+  }
+ ]
+}

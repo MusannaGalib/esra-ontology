@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use the ESRA ontology, please cite this release."
+type: dataset
+title: "ESRA ontology"
+abstract: >
+  The terms of the ESRA namespace (https://data.energystoragera.org/ns#) used by the ESRA Data
+  Platform of the Energy Storage Research Alliance. Each term states whether ESRA defines it or
+  only gives a standard BattINFO, EMMO, CHAMEO, QUDT or schema.org term the name ESRA's records use.
+authors:
+  - family-names: Galib
+    given-names: Musanna
+    affiliation: Argonne National Laboratory
+repository-code: https://github.com/MusannaGalib/esra-ontology
+url: https://data.energystoragera.org/ns
+license: CC-BY-4.0
+version: "2026-11-15"
+date-released: 2026-11-15
+keywords:
+  - ontology
+  - battery
+  - provenance
+  - BattINFO
+  - EMMO
