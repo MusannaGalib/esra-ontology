@@ -4,7 +4,7 @@ The terms of the ESRA namespace, `https://data.energystoragera.org/ns#`, used by
 Energy Storage Research Alliance: the classes, properties and links of the working graph, the vocabulary of the
 semantic layer, and the terms a person reviewed and approved.
 
-- **Files:** [`esra.ttl`](esra.ttl) (Turtle, OWL) and [`esra.jsonld`](esra.jsonld). 262 terms in version 2026-11-15:
+- **Files:** [`esra.ttl`](esra.ttl) (Turtle, OWL) and [`esra.jsonld`](esra.jsonld). 262 terms in version 2026-11-17:
   235 defined by ESRA and 27 that give a standard term the name ESRA's records use. Every `esra:` address
   in the platform's released knowledge graphs is defined here.
 - **Live:** `https://data.energystoragera.org/ns` (Turtle, JSON-LD or a readable page, by content negotiation).

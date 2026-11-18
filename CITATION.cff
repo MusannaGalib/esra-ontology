@@ -13,8 +13,8 @@ authors:
 repository-code: https://github.com/MusannaGalib/esra-ontology
 url: https://data.energystoragera.org/ns
 license: CC-BY-4.0
-version: "2026-11-15"
-date-released: 2026-11-15
+version: "2026-11-17"
+date-released: 2026-11-17
 keywords:
   - ontology
   - battery
